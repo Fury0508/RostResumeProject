@@ -1,9 +1,13 @@
 FROM python:latest
 
+RUN apt-get update
+RUN apt-get install -y poppler-utils
 WORKDIR /app
 
 COPY requirements.txt requirements.txt
-COPY app/ /app/
+# COPY app/ /app/
+COPY . /app/
+
 
 RUN pip install -r requirements.txt
 
