@@ -4,8 +4,11 @@ from pdf2image import convert_from_path
 import os
 import base64
 from openai import OpenAI
-client = OpenAI(
-)
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+client = OpenAI()
 
 
 # Function to encode the image
